@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'RecipePortalDB',
+    'recipeportaldb',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'RecipePortal.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'RecipePortal',
+        'NAME': 'recipeportalapp',
         'USER': 'chrispnguyen',  # '$USER'
         'PASSWORD': '',
         'HOST': '/tmp',
