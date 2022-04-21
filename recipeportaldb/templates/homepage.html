@@ -1,0 +1,56 @@
+<!-- The homepage html/css follows a tutorial guide with personal modifications where seem fit:
+     https://medialoot.com/blog/how-to-code-a-homepage-template-with-html5-and-css3/ -->
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <title>Home Page | RecipeHouse</title>
+</head>
+
+<body>
+    <!-- Default header for all pages -->
+    <header>
+        <div class="wrapper">
+            <h1>RecipeHouse</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'recipedatabase' %}">Recipe Database</a></li>
+                    <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="hero-image">
+        <div class="wrapper">
+            <h2>Welcome to the House of Recipes!</h2>
+            <a href="{% url 'recipedatabase' %}" class="button-1">Get Started</a>
+        </div>
+    </div>
+
+    <div id="features">
+        <div class="wrapper">
+            <ul>
+                <li class="feature-1">
+                    <h4>Easy to Use</h4>
+                    <p>The web application is very straight-forward to use and requires almost no training for new users. Users can add, remove, update, and search for recipes.</p>
+                </li>
+                <li class="feature-2">
+                    <h4>Fast and Efficient</h4>
+                    <p>The web application will run fairly fast with little to no lag or delay when interacting with the recipe database in any way. </p>
+                </li>
+                <li class="feature-3">
+                    <h4>Creative</h4>
+                    <p>The web application is designed and created by a couple college students striving to learn more and get experience.</p>
+                </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
