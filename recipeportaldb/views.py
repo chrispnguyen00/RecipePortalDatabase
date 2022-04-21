@@ -12,3 +12,8 @@ How to create pages for frontend side
 def homepage(request):
     return render(request, 'homepage.html', context={})
 
+def thedatabase(request):
+    return render(request, 'thedatabase.html', context={})
+
+def about(request):
+    return render(request, 'about.html', context={})
