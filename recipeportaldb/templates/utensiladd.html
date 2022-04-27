@@ -1,0 +1,17 @@
+{% include "add_database.html" %}
+
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <b>Utensil Name:</b> <input type="text" name="utensilname"/> <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+
+    {% if added == True %}
+        <p> Utensil added! </p>
+    {% endif %}
+
+    {% if added == False %}
+        <p> Unable to add Utensil! </p>
+    {% endif %}
+</div>

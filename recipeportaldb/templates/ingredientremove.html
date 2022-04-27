@@ -1,0 +1,16 @@
+{% include "remove_database.html" %}
+
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        Ingredient ID to delete: <input type="number" name="ingredientid"/> <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if removed == True %}
+        <p> Ingredient removed! </p>
+    {% endif %}
+
+    {% if removed == False %}
+        <p> Unable to remove Ingredient! </p>
+    {% endif %}
+</div>

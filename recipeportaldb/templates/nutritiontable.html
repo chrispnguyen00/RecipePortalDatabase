@@ -1,0 +1,31 @@
+{% include "thedatabase.html" %}
+<div class="wrapper">
+    <table>
+        <tr>
+            <th>NutritionID</th>
+            <th>IngredientID</th>
+            <th>Portion Size</th>
+            <th>Calories</th>
+            <th>Protein</th>
+            <th>Fat</th>
+            <th>Sodium</th>
+            <th>Carbs</th>
+        </tr>
+        {% if nutritions %}
+            {% for item in nutritions %}
+                <tr>
+                    <td>{{ item.nutritionid }}</td>
+                    <td>{{ item.ingredientid.ingredientid }}</td>
+                    <td>{{ item.portionsize }}</td>
+                    <td>{{ item.calories }}</td>
+                    <td>{{ item.protein }}</td>
+                    <td>{{ item.fat }}</td>
+                    <td>{{ item.sodium }}</td>
+                    <td>{{ item.carbs }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <td> No Nutrition Labels found!</td>
+        {%  endif %}
+    </table>
+</div>

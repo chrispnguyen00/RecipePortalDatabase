@@ -1,0 +1,18 @@
+{% include "add_database.html" %}
+
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <b>Category Name:</b> <input type="text" name="categoryname"/> <br/>
+        <input type="submit" value="Submit"/>
+
+
+    </form>
+    {% if added == True %}
+        <p> Category added! </p>
+    {% endif %}
+
+    {% if added == False %}
+        <p> Unable to add Category! </p>
+    {% endif %}
+</div>

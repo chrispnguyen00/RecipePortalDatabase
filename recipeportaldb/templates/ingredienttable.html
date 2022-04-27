@@ -1,0 +1,21 @@
+{% include "thedatabase.html" %}
+<div class="wrapper">
+    <table>
+        <tr>
+            <th>IngredientID</th>
+            <th>Ingredient Name</th>
+            <th>Type of Food</th>
+        </tr>
+        {% if ingredients %}
+            {% for item in ingredients %}
+                <tr>
+                    <td>{{ item.ingredientid }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.type }} </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <td> No Ingredients found!</td>
+        {%  endif %}
+    </table>
+</div>

@@ -1,0 +1,24 @@
+{% include "add_database.html" %}
+
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <b>Recipe Name:</b> <input type="text" name="recipename"/> <br/>
+        <b>Description:</b> <br/>
+<textarea cols="35" rows="8" name="recipedescription">
+</textarea><br/>
+        <b>Steps:</b><br/>
+<textarea cols="35" rows="8" name="recipesteps">
+</textarea><br/>
+        <input type="submit" value="Submit"/>
+
+
+    </form>
+    {% if added == True %}
+        <p> Recipe added! </p>
+    {% endif %}
+
+    {% if added == False %}
+        <p> Unable to add Recipe! </p>
+    {% endif %}
+</div>

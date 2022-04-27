@@ -1,0 +1,29 @@
+{% include "add_database.html" %}
+
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <b>IngredientID:</b> <select name="id">
+            {% for item in ingredientids %}
+                <option value={{item}}> {{item}} </option>
+            {% endfor %}
+        </select> <br/>
+
+        <b>Portion Size:</b> <input type="number" name="portionsize"/> <br/>
+        <b>Calories:</b> <input type="number" name="calories"/> <br/>
+        <b>Fat:</b> <input type="number" name="fat"/> <br/>
+        <b>Protein:</b> <input type="number" name="protein"/> <br/>
+        <b>Sodium:</b> <input type="number" name="sodium"/> <br/>
+        <b>Carbs:</b> <input type="number" name="carbs"/> <br/>
+        <input type="submit" value="Submit"/>
+
+
+    </form>
+    {% if added == True %}
+        <p> Nutrition added! </p>
+    {% endif %}
+
+    {% if added == False %}
+        <p> Unable to add Nutrition! </p>
+    {% endif %}
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <title>Home Page | RecipeHouse</title>
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Default header for all pages -->
+    <header>
+        <div class="wrapper">
+            <h1>RecipeHouse</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'viewdatabase' %}">View</a></li>
+                    <li><a href="{% url 'search_database' %}">Search</a></li>
+                    <li><a href="{% url 'add_database' %}">Add</a></li>
+                    <li><a href="{% url 'remove_database' %}">Remove</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Add code for 1) Delete recipes -->
+    <div class="display1">
+        <div class="wrapper">
+            <h3> Remove from the Database! </h3>
+            <h5> Identify respected Table ID to remove that row.</h5>
+            <a href="{% url 'reciperemove' %}" class="button-2">Delete Recipes!</a>
+            <a href="{% url 'categoryremove' %}" class="button-2">Delete Categories!</a>
+            <a href="{% url 'ingredientremove' %}" class="button-2">Delete Ingredients!</a>
+            <a href="{% url 'nutritionremove' %}" class="button-2">Delete Nutrition Labels!</a>
+            <a href="{% url 'utensilremove' %}" class="button-2">Delete Utensils!</a>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

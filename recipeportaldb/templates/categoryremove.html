@@ -1,0 +1,16 @@
+{% include "remove_database.html" %}
+
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        Category ID to delete: <input type="number" name="categoryid"/> <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if removed == True %}
+        <p> Category removed! </p>
+    {% endif %}
+
+    {% if removed == False %}
+        <p> Unable to remove Category! </p>
+    {% endif %}
+</div>

@@ -1,0 +1,19 @@
+{% include "add_database.html" %}
+
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <b>Ingredient Name:</b> <input type="text" name="ingredientname"/> <br/>
+        <b>Type of Food:</b> <input type="text" name="foodtype"/> <br/>
+        <input type="submit" value="Submit"/>
+
+
+    </form>
+    {% if added == True %}
+        <p> Ingredient added! </p>
+    {% endif %}
+
+    {% if added == False %}
+        <p> Unable to add Ingredient! </p>
+    {% endif %}
+</div>

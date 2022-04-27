@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <title>Home Page | RecipeHouse</title>
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Default header for all pages -->
+    <header>
+        <div class="wrapper">
+            <h1>RecipeHouse</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'viewdatabase' %}">View</a></li>
+                    <li><a href="{% url 'search_database' %}">Search</a></li>
+                    <li><a href="{% url 'add_database' %}">Add</a></li>
+                    <li><a href="{% url 'remove_database' %}">Remove</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Add code for 1) Add recipes -->
+    <div class="display1">
+        <div class="wrapper">
+            <h3> Add to the Database! </h3>
+
+            <a href="{% url 'recipeadd' %}" class="button-2">Add Recipes!</a>
+            <a href="{% url 'categoryadd' %}" class="button-2">Add Categories!</a>
+            <a href="{% url 'ingredientadd' %}" class="button-2">Add Ingredients!</a>
+            <a href="{% url 'nutritionadd' %}" class="button-2">Add Nutrition Labels!</a>
+            <a href="{% url 'utensiladd' %}" class="button-2">Add Utensils!</a>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

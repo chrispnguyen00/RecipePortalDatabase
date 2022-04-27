@@ -1,0 +1,19 @@
+{% include "thedatabase.html" %}
+<div class="wrapper">
+    <table>
+        <tr>
+            <th>CategoryID</th>
+            <th>Category Name</th>
+        </tr>
+        {% if categories %}
+            {% for item in categories %}
+                <tr>
+                    <td>{{ item.categoryid }}</td>
+                    <td>{{ item.name }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <td> No Categories found!</td>
+        {%  endif %}
+    </table>
+</div>

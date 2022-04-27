@@ -1,0 +1,20 @@
+{% include "thedatabase.html" %}
+<div class="wrapper">
+    <table>
+        <tr>
+            <th>UtensilID</th>
+            <th>Utensil Name</th>
+
+        </tr>
+        {% if utensils %}
+            {% for item in utensils %}
+                <tr>
+                    <td>{{ item.utensilid }}</td>
+                    <td>{{ item.name }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <td> No Utensils found!</td>
+        {%  endif %}
+    </table>
+</div>

@@ -1,0 +1,16 @@
+{% include "remove_database.html" %}
+
+<div class="wrapper">
+    <form action="" method="POST">
+        {% csrf_token %}
+        Utensil ID to delete: <input type="number" name="utensilid"/> <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if removed == True %}
+        <p> Utensil removed! </p>
+    {% endif %}
+
+    {% if removed == False %}
+        <p> Unable to remove Utensil! </p>
+    {% endif %}
+</div>
