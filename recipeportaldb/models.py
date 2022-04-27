@@ -85,7 +85,6 @@ class IngredientRecipe(models.Model):
 class IngredientNutrition(models.Model):
     nutritionid = models.IntegerField(primary_key=True)
     ingredientid = models.ForeignKey("Ingredient", to_field="ingredientid", on_delete=models.CASCADE)
-    #ingredientid = models.OneToOneField(Ingredient, on_delete=models.CASCADE)
     portionsize = models.FloatField(max_length=24)
     calories = models.IntegerField()
     fat = models.IntegerField()

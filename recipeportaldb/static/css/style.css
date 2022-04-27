@@ -39,16 +39,17 @@ h4 {
 }
 h5 {
     font-size: 15px;
-    color: #444;
+    color: red;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
 }
 a {
     text-decoration: none;
     color: #444;
 }
 a:hover {
-    color: #02b8dd;
+    color: turquoise;
 }
 strong {
     font-weight: bold;
@@ -89,7 +90,8 @@ header nav ul li a {
     text-transform: uppercase;
     font-weight: bold;
     display: block;
-    margin-right: 20px;
+    margin-right: 10px;
+    text-shadow: 0 0 3px #FF0000;
 }
 #hero-image {
     height: 500px;
@@ -117,6 +119,17 @@ header nav ul li a {
     background-color: #fff;
     color: #444;
 }
+.button-2 {
+    display: inline-block;
+    color: #444;
+    text-align: center;
+    border-radius: 3px;
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+    margin: 0 auto;
+    text-decoration: underline;
+}
 #features ul {
     margin: 50px 0;
 }
@@ -137,3 +150,5 @@ header nav ul li a {
 #features ul li.feature-3 {
     background: url('../recipeportaldb/media/featuresicon-3.png') no-repeat top center;
 }
+
+#ye

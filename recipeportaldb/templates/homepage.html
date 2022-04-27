@@ -5,8 +5,7 @@
 {% load static %}
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
     <title>Home Page | RecipeHouse</title>
 </head>
@@ -19,8 +18,10 @@
             <nav>
                 <ul>
                     <li><a href="{% url 'homepage' %}">Home</a></li>
-                    <li><a href="{% url 'recipedatabase' %}">Recipe Database</a></li>
-                    <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                    <li><a href="{% url 'viewdatabase' %}">View</a></li>
+                    <li><a href="{% url 'search_database' %}">Search</a></li>
+                    <li><a href="{% url 'add_database' %}">Add</a></li>
+                    <li><a href="{% url 'remove_database' %}">Remove</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,7 +30,7 @@
     <div id="hero-image">
         <div class="wrapper">
             <h2>Welcome to the House of Recipes!</h2>
-            <a href="{% url 'recipedatabase' %}" class="button-1">Get Started</a>
+            <a href="{% url 'viewdatabase' %}" class="button-1">View Database!</a>
         </div>
     </div>
 

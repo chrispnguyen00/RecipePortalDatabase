@@ -3,9 +3,20 @@
 {% load static %}
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
     <title>The Database | RecipeHouse</title>
+    <style>
+        th{
+            border: 1px black solid;
+            text-align: center;
+            font-weight: bold;
+        }
+        td{
+            border: 1px black solid;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,14 +27,28 @@
             <nav>
                 <ul>
                     <li><a href="{% url 'homepage' %}">Home</a></li>
-                    <li><a href="{% url 'recipedatabase' %}">Recipe Database</a></li>
-                    <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                    <li><a href="{% url 'viewdatabase' %}">View</a></li>
+                    <li><a href="{% url 'search_database' %}">Search</a></li>
+                    <li><a href="{% url 'add_database' %}">Add</a></li>
+                    <li><a href="{% url 'remove_database' %}">Remove</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Add code for 1) Add recipes, 2) Remove recipes, 3) Display recipes -->
+    <!-- Add code for 1) Display recipes, 2) Search recipes [maybe] -->
+
+    <div class="display">
+        <div class="wrapper">
+            <h3> Recipe Database </h3>
+
+            <a href="{% url 'recipetable' %}" class="button-2">View Recipes!</a>
+            <a href="{% url 'categorytable' %}" class="button-2">View Categories!</a>
+            <a href="{% url 'ingredienttable' %}" class="button-2">View Ingredients!</a>
+            <a href="{% url 'nutritiontable' %}" class="button-2">View Nutrition Labels!</a>
+            <a href="{% url 'utensiltable' %}" class="button-2">View Utensils!</a>
+        </div>
+    </div>
 
 
 
